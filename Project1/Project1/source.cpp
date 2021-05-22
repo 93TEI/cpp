@@ -88,5 +88,16 @@ int main()
 	PERSON new_person(kim);
 	std::cout << new_person << endl; // 0이 출련된다
 
+	enum class PersonType	// enum이 달라도 안의 내용물의 이름이 같으면 같게 처리되는 문제를 방지
+	{
+		MEN,
+		WOMAN,
+	};
+
+	//typedef 별칭
+	//typedef double db_t
+	//using db_t = double
+	// 위 두 문법은 같은 것
+
 	return 0;
 }
