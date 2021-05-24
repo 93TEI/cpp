@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+#include <ctime>
+#include <cstdlib>
+#include <random>
 #include "header.h"
 
 #define TEI
@@ -98,6 +101,20 @@ int main()
 	//typedef double db_t
 	//using db_t = double
 	// 위 두 문법은 같은 것
+
+	//난수 생성
+	//c++ 11 전
+	std::srand(static_cast<unsigned int>(time(0)));
+
+	for (int i = 0; i < 10; i++)
+		std::cout << std::rand()%10 << endl;
+	//c++ 11 후
+		//#include <random>해서 사용
+
+	//배열
+	int prime[5] = { 2,3,5,7,11 }; // 배열을 초기화 목록 사용해서 초기화
+	///배열 인덱스에 enum은 괜찮지만 enum class는 암시적 정수변환이 안되기 때문에 형변환해줘야함
+
 
 	return 0;
 }
